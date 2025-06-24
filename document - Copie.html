@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Documents importants</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #blank;
+      margin-bottom: 30px;
+    }
+    .doc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .doc-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .doc-item h3 {
+      margin: 0;
+    }
+    .doc-item a {
+      text-decoration: none;
+      color: white;
+      background-color: #004080;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .doc-item a:hover {
+      background-color: #003060;
+    }
+  h2 {
+  font-size: 1.6em;
+  color: #004080;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 5px;
+}
+  .hero-documents {
+  background-color : #004080;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-documents h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-documents p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Animation d’apparition douce */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+  .don-box {
+  background: linear-gradient(to right, #ffe600, #ff8800);
+  color: #222;
+  padding: 30px 20px;
+  border-radius: 20px;
+  max-width: 350px;
+  margin: 30px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+.don-box h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #004080;
+}
+
+.don-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.don-box ul li::before {
+  content: "✓";
+  color: green;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.don-btn {
+  display: inline-block;
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.don-btn:hover {
+  background-color: #002f5c;
+}
+
+/* Animation slide-in */
+@keyframes slideIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  .popup-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+.popup-content h2 {
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.popup-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.popup-content ul li::before {
+  content: "✓ ";
+  color: green;
+  font-weight: bold;
+}
+
+.don-btn {
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+  .don-box {
+  background-color: #e6f0ff;
+  border-left: 6px solid #004080;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.don-box h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.don-box p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.don-link {
+  display: inline-block;
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.don-link:hover {
+  background-color: #002f5c;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <section class="hero-documents">
+  <h1>Documents</h1>
+  <p>Retrouvez ici toutes les ressources importantes du club : inscriptions, chartes, autorisations...</p>
+</section>
+  </header>
+   <!-- Bouton pour ouvrir la popup -->
+<button id="openPopup" class="popup-trigger">Pourquoi faire un don ?</button>
+
+<!-- Contenu de la popup -->
+<div id="donPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>Pourquoi faire un don au VBCC ?</h2>
+    <p>Soutenir le VBCC, c’est faire vivre le volley à Cysoing !</p>
+    <ul>
+      <li>+200 adhérents</li>
+      <li>Formation jeunes & seniors</li>
+      <li>Projets éducatifs & sportifs</li>
+      <li>Visibilité régionale</li>
+    </ul>
+    <a href="https://www.helloasso.com/associations/volley-ball-club-cysoing" target="_blank" class="don-btn">Faire un don</a>
+  </div>
+</div>
+  
+  <main>
+    <div class="doc-item">
+        <h3>Faire un Don !!</h3>
+        <a href="https://drive.google.com/file/d/1SAGlCAmgVBrxntEx-5Y56IQYCEMADfS-/view" target="_blank">Ouvrir</a>
+      </div>
+  
+  <section class="doc-list">
+    <h2>Chartes </h2>
+    <div class="doc-item">
+      <h3>Charte du Club</h3>
+      <a href="https://drive.google.com/file/d/1sQcrvY0-e3wmzH6MY14Tvvk9W_p0ZonK/view" target="_blank">Ouvrir</a>
+    </div>
+    <div class="doc-item">
+      <h3>Charte du volleyeur</h3>
+      <a href="https://drive.google.com/file/d/1SU-wrOn3lKQYH60NGluKYeSWaZBGtTGL/view" target="_blank">Ouvrir</a>
+    </div>
+    </div>
+      <div class="doc-item">
+        <h3>Charte de l’entraîneur</h3>
+        <a href="https://drive.google.com/file/d/1bA77WTgCg10VnF04eUZT5FGNtSwo2Ad0/view" target="_blank">Ouvrir</a>
+      </div>
+    </div>
+      <div class="doc-item">
+        <h3>Charte du fairplay et du respect républicain</h3>
+        <a href="https://drive.google.com/file/d/15agHXDiI9r9asLqko7fHbaVZvQeGgQPE/view" target="_blank">Ouvrir</a>
+      </div>
+
+    <h2 style="margin-top: 40px;">Documents d'inscription</h2>
+    <div class="doc-item">
+      <h3>Formulaire de licence 2024/2025</h3>
+      <a href="https://drive.google.com/file/d/1aiEzob9WLyCWdHJjTEqc4iShZqK0NdJl/view" target="_blank">Ouvrir</a>
+    </div>
+    <div class="doc-item">
+      <h3>Certificat Médical</h3>
+      <a href="https://drive.google.com/file/d/1SeeGcL4PStSx1evuOhz5Sa-bfhCvL6xb/view" target="_blank">Ouvrir</a>
+    </div>
+    </div>
+      <div class="doc-item">
+        <h3>Fiche de renseignements 2024/2025</h3>
+        <a href="https://drive.google.com/file/d/1IW8TTXhYPSViIhP1bdeUYZtDQkBZ_ECp/view" target="_blank">Ouvrir</a>
+      </div>
+     </div>
+      
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Club Volleyball Cysoing - Tous droits réservés</p>
+  </footer>
+<script>
+  const popup = document.getElementById('donPopup');
+  const btn = document.getElementById('openPopup');
+  const close = document.querySelector('.close-popup');
+
+  btn.onclick = () => popup.style.display = 'block';
+  close.onclick = () => popup.style.display = 'none';
+  window.onclick = (e) => { if (e.target == popup) popup.style.display = 'none'; };
+</script>
+</body>
+</html>

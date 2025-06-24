@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Équipes - VBCC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .intro {
+      text-align: center;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .intro p {
+      font-size: 1.2em;
+    }
+    .teams-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .team-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+    .team-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .team-card h3 {
+      margin: 15px 10px 10px;
+      color: #004080;
+    }
+    .team-card a {
+      display: inline-block;
+      margin: 15px;
+      padding: 10px 20px;
+      background-color: #ff8800;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    .team-card a:hover {
+      background-color: #e67000;
+    }
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 15px 0;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    nav a, nav span {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+    nav a:hover, nav span:hover {
+      background-color: #0059b3;
+      border-radius: 8px;
+      transform: translateY(-2px);
+    }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #004080;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 200px;
+  top: 100%; /* 👈 positionne le menu juste en dessous du bouton */
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #004080;
+}
+h2 {
+      font-size: 2em;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nos Équipes</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle">Équipes ▼</span>
+        <div class="dropdown-content">
+          <a href="equipes.html">👥 Toutes les équipes</a>
+          <a href="equipesm1.html">🏐 Seniors M1</a>
+          <a href="equipesm2.html">🏐 Seniors M2</a>
+          <a href="equipe-u13.html">🏐 U13</a>
+          <a href="equipe-u15.html">🏐 U15</a>
+          <a href="equipe-loisir.html">🏐 Loisir</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.helloasso.com/associations/volley-ball-club-cysoing/boutiques/boutique-vbcc" target="_blank" style="background-color: #ff8800; border-radius: 20px; font-weight: bold; padding: 10px 20px;">🛍️ Boutique</a>
+    </nav>
+  </header>  <div class="intro">
+    <p>
+      Au Volley-Ball Club de Cysoing, chaque équipe est une pièce essentielle de notre grande famille.
+      Découvrez nos 15 équipes engagées dans la compétition ou la pratique loisir. Merci à toutes les joueuses,
+      joueurs, entraîneurs et familles qui font vivre cette belle aventure humaine !
+    </p>
+  </div>  <div class="teams-grid">
+    <div class="team-card">
+      <img src="photo seniors A filles.jpg" alt="Seniors A Femmes">
+      <h3>Seniors A Femmes</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/seniors/2024-2025/index_2fc.htm" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="Photo prénat.jpg" alt="Seniors A Hommes">
+      <h3>Seniors A Hommes</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=LIFL&poule=PMA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="R1 BIS.jpg" alt="Seniors B Femmes">
+      <h3>Seniors B Femmes</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=LIFL&poule=1FC" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="ACC REG.jpg" alt="Seniors B Hommes">
+      <h3>Seniors B Hommes</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=AMA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="D1 .jpg" alt="Seniors C Femmes">
+      <h3>Seniors C Femmes</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="M18 G A.jpg" alt="Seniors C Femmes">
+      <h3>M18 A Garçon</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="M18 G B.jpg" alt="Seniors C Femmes">
+      <h3>M18 B Garçons</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="M18 F A.jpg" alt="Seniors C Femmes">
+      <h3>M18 A Filles</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="M18 F B.jpg" alt="Seniors C Femmes">
+      <h3>M18 B Filles</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="m15 G.jpg" alt="Seniors C Femmes">
+      <h3>M15 Garçons</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="m15 F.jpg" alt="Seniors C Femmes">
+      <h3>M15 Filles</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="M13 G.jpg" alt="Seniors C Femmes">
+      <h3>M13 Garçons</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="M13 F.jpg" alt="Seniors C Femmes">
+      <h3>M13 Filles</h3>
+      <a href="https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2024/2025&codent=PTFL59&poule=DFA" target="_blank">Calendrier & Résultats</a>
+    </div>
+    <div class="team-card">
+      <img src="LOISIRS.jpg" alt="Seniors C Femmes">
+      <h3>Loisirs</h3>
+    </div>
+    <div class="team-card">
+      <img src="ecole de volley.jpg" alt="Seniors C Femmes">
+      <h3>Ecole de volley</h3>
+    </div>
+    
+    <!-- Ajoute ici les 13 autres cartes de la même façon -->
+  </div>
+</body>
+</html>

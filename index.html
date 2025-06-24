@@ -12,26 +12,76 @@
       box-sizing: border-box;
       font-family: 'Montserrat', sans-serif;
     }
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background: url('photo équipe.jpg') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
-    header h1 {
-      font-size: 3em;
-    }
+header h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 600px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.carousel-controls button {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.carousel-indicators div {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #004080;
+}
+  
     nav {
       background-color: #004080;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -41,7 +91,16 @@
       transition: background 0.3s;
     }
     nav a:hover {
-      background-color: #0066cc;
+      background-color: #004080;
+    }
+    nav a.boutique-btn {
+      background-color: #ff8800;
+      border-radius: 20px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    nav a.boutique-btn:hover {
+      background-color: #ff9900;
     }
     .container {
       padding: 40px 20px;
@@ -60,18 +119,36 @@
       padding: 20px;
       margin-top: 40px;
     }
+     
+    
+
+</style>
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Club Volleyball Cysoing</h1>
+  <header>   
   </header>
-
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="Photo 1.jpg" alt="Photo 1">
+      <img src="Photo 2.jpg" alt="Photo 2">
+      <img src="image3.jpg" alt="Photo 3">
+    </div>
+    <div class="carousel-controls">
+      <button onclick="changeSlide(-1)">&#10094;</button>
+      <button onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="carousel-indicators"></div>
+  </div>
   <nav>
     <a href="#accueil">Accueil</a>
-    <a href="#equipes">Équipes</a>
-    <a href="#calendrier">Calendrier</a>
-    <a href="#contact">Contact</a>
+    <a href="equipes.html" target= "_blank">Équipes</a>
+    <a href="https://www.helloasso.com/associations/volley-ball-club-cysoing/boutiques/boutique-vbcc" target="_blank">Boutique</a>
+    <a href="BeachVolley.html" target ="_blank">Beach Volleyball</a>
+    <a href="https://www.ffvbbeach.org/ffvbapp/resu/planning_club.php?aff_semaine=SUI&date_jour=1744927200&cnclub=0599408&x=4&y=12" target="_blank">Calendrier</a>
+    <a href ="sponsoring.html"target ="_blank" > Sponsors </a>
+    <a href="Contact.html"target ="_blank">Contact</a>
   </nav>
 
   <div class="container" id="accueil">
@@ -79,23 +156,46 @@
     <p>Le club de volley de Cysoing accueille des joueuses et joueurs de tout âge et niveau. Rejoignez-nous pour partager la passion du volleyball dans une ambiance conviviale et dynamique !</p>
   </div>
 
-  <div class="container" id="equipes">
-    <h2 class="section-title">Nos équipes</h2>
-    <p>Découvrez nos équipes : jeunes, loisirs, compétitions... Il y en a pour tous les goûts !</p>
-  </div>
-
-  <div class="container" id="calendrier">
-    <h2 class="section-title">Calendrier des matchs</h2>
-    <p>Retrouvez bientôt ici les dates des prochains matchs et événements du club.</p>
-  </div>
-
   <div class="container" id="contact">
     <h2 class="section-title">Contact</h2>
-    <p>Vous pouvez nous contacter à l’adresse suivante : <strong>contact@volley-cysoing.fr</strong></p>
+    <p>Vous pouvez nous contacter à l’adresse suivante : <strong>vbccysoing@gmail.com</strong></p>
   </div>
+  
 
   <footer>
     <p>&copy; 2025 Club Volleyball Cysoing - Tous droits réservés</p>
   </footer>
+  <script>
+    const images = document.querySelectorAll('.carousel-images img');
+    const carousel = document.querySelector('.carousel-images');
+    const indicators = document.querySelector('.carousel-indicators');
+    let index = 0;
+
+    function showSlide(i) {
+      index = (i + images.length) % images.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      updateIndicators();
+    }
+
+    function changeSlide(step) {
+      showSlide(index + step);
+    }
+
+    function updateIndicators() {
+      indicators.innerHTML = '';
+      for (let i = 0; i < images.length; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add(i === index ? 'active' : '');
+        dot.addEventListener('click', () => showSlide(i));
+        indicators.appendChild(dot);
+      }
+    }
+
+    setInterval(() => changeSlide(1), 5000);
+    updateIndicators();
+  </script>
+
+  
+  
 </body>
 </html>

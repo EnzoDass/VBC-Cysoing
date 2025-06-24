@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Beach Volley à Cysoing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    header, footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      font-size: 2em;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    .cta-button .btn-reservation {
+      background-color: #ff8800;
+      color: white;
+      padding: 15px 30px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+    }
+    .cta-button .btn-reservation:hover {
+      background-color: #ff6600;
+    }
+    .beach-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+    .map-container {
+      margin-top: 30px;
+    }
+/* Conteneur flex pour aligner les éléments côte à côte */
+.reservation-container {
+  display: flex;
+  justify-content: space-between;  /* Espace égal entre les éléments */
+  gap: 20px; /* Un petit écart entre les éléments */
+  flex-wrap: wrap; /* Permet aux éléments de se réorganiser si nécessaire */
+}
+
+.reservation-image {
+  flex: 1;  /* Prend un espace égal */
+  max-width: 45%;  /* Limite la largeur de l'image */
+}
+
+.reservation-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.reservation-map {
+  flex: 1; /* Prend un espace égal */
+  max-width: 45%; /* Limite la largeur de la carte */
+}
+
+/* Pour les écrans plus petits, ajuster la mise en page */
+@media (max-width: 768px) {
+  .reservation-container {
+    flex-direction: column;  /* Disposition en colonne sur les petits écrans */
+    align-items: center;  /* Centrer les éléments */
+  }
+
+  .reservation-image, .reservation-map {
+    max-width: 100%;  /* Prend toute la largeur sur petits écrans */
+    margin-bottom: 10px;  /* Espacement sous chaque élément */
+  }
+}
+.reservation-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.reservation-calendar,
+.reservation-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+}
+
+.reservation-form {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reservation-form button {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+  background-color: #002f5c;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>Le Beach Volley à Cysoing</h1>
+  </header>
+
+  <section id="temoignages">
+    <h2>Ce que nos utilisateurs en pensent</h2>
+    <div class="testimonial">
+      <p>"Les terrains sont superbes, l’endroit est top pour passer un bon moment entre amis. Très pratique de pouvoir réserver en ligne !" - <strong>Martin, membre du club</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"Super expérience ! Réserver un terrain via le site est rapide et facile, et l’ambiance sur place est géniale." - <strong>Enzo, joueur régulier</strong></p>
+    </div>
+    </script>
+  </section>
+  <section id="reservation">
+    <h2>Réservez un terrain</h2>
+    <p>Choisissez une date et une heure pour réserver votre terrain de beach-volley.</p>
+  
+    <!-- Conteneur flex pour la photo et la carte -->
+    <div class="reservation-container">
+      <!-- Image de réservation -->
+      <div class="reservation-image">
+        <img src="beachnuit2.jpg" alt="Réservation Terrain Beach Volleyball" />
+      </div>
+  
+      <!-- Google Maps -->
+      <div class="reservation-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1112.8659473094635!2d3.212042729039569!3d50.57200611109428!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d9de4c9615cd%3A0xde6eb8bdaba40ff5!2sComplexe%20Sportif%20Jean%20Tiquet!5e1!3m2!1sfr!2sfr!4v1744158460716!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Calendrier de réservation (Google Calendar) -->
+    <!-- Section 2: Calendrier de réservation (Google Calendar) -->
+    <section id="reservation2">
+      <h2>Réservez un terrain</h2>
+      <p>Choisissez une date et une heure pour réserver votre terrain de beach-volley ou remplissez le formulaire.</p>
+      <div class="reservation-container">
+        <!-- Calendrier -->
+        <div class="reservation-calendar">
+          <iframe src="https://calendar.google.com/calendar/u/0/embed?src=rmur40r8kcv8pvb832pocqc2dc@group.calendar.google.com" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+        </div>
+  
+        <!-- Formulaire Google -->
+        <div class="reservation-form">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxdjSVw6BZs_Hx91m8XIzALfh_FeD6OZlPzNKZwG1P40wLeQ/viewform?embedded=true" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Section 5: Tarifs -->
+    <section id="tarifs">
+      <h2>Nos tarifs</h2>
+      <table>
+        <tr>
+          <th>Session</th>
+          <th>Durée</th>
+          <th>Prix</th>
+        </tr>
+        <tr>
+          <td>Réservation/personne</td>
+          <td>2 heures</td>
+          <td>4€</td>
+        </tr>
+        <tr>
+          <td>Réservation/personne habitant Cysoing</td>
+          <td>2 heures</td>
+          <td>2€</td>
+        </tr>
+      </table>
+    </section>
+  
+    <!-- Footer toujours à la fin -->
+    <footer>
+      <p>&copy; 2025 Club Volleyball Cysoing - Tous droits réservés</p>
+    </footer>
+  </body>
+  </html>
+  

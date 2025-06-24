@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séniors Masculins B </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: #f8f9fa; color: #333; }
+        header {
+        background-color: #004080;
+         padding: 40px;
+        color: white;
+        text-align: center;
+        }
+        nav {
+         background-color: #004080;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 15px 0;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+}
+nav a:hover {
+      background-color: #0059b3;
+      border-radius: 8px;
+      transform: translateY(-2px);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0059b3;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 200px;
+  top: 100%; /* 👈 positionne le menu juste en dessous du bouton */
+  left: 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0073e6;
+}
+.container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2em;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    .team-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .image-container {
+  width: 100%; /* ou une taille spécifique comme 500px */
+  height: 400px; /* ajuste la hauteur */
+  background-image: url('ton-image.jpg');
+  background-size: cover; /* l'image couvre tout le conteneur sans déformation */
+  background-position: center center; /* centre l'image dans le conteneur */
+  background-repeat: no-repeat; /* empêche la répétition de l'image */
+}
+</style>
+</head>
+</body>
+<header>
+    <h1>Séniors Masculins B</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <div class="dropdown">
+      <span class="dropdown-toggle">Équipes ▼</span>
+      <div class="dropdown-content">
+        <a href="equipes.html">👥 Toutes les équipes</a>
+        <a href="equipesm1.html">🏐 Seniors M1</a>
+        <a href="equipesm2.html">🏐 Seniors M2</a>
+        <a href="equipe-u13.html">🏐 U13</a>
+        <a href="equipe-u15.html">🏐 U15</a>
+        <a href="equipe-loisir.html">🏐 Loisir</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.helloasso.com/associations/volley-ball-club-cysoing/boutiques/boutique-vbcc" target="_blank" style="background-color: #ff8800; border-radius: 20px; font-weight: bold; padding: 10px 20px;">🛍️ Boutique</a>
+  </nav>
+
+  <div class="container">
+    <h2>Présentation</h2>
+    <img src="ACC REG.jpg" alt="Équipe 2 du Club" class="team-image">
+    <p>L’équipe secondaire de Cysoing évolue en accession régionale et représente fièrement notre club lors des compétitions officielles. Elle est composée de joueurs passionnés, encadrés par un staff expérimenté.</p>
+
+    <h2>Objectifs</h2>
+    <p>Notre objectif est de progresser chaque saison, en mettant en avant la formation locale et l'esprit d'équipe. Les entraînements intensifs, la cohésion et l’ambiance conviviale font la force de ce groupe.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Club Volleyball Cysoing - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
